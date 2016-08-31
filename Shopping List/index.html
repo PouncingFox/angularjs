@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<!--Boostrap-->
+    <link rel="stylesheet nofollow" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fo/css/font-awesome.min.css">
 <body>
 
 <script>
@@ -23,20 +31,25 @@ app.controller("myCtrl", function($scope) {
 });
 </script>
 
-<h2>Shopping List</h2>
-
-<div ng-app="ShoppingList" ng-controller="myCtrl">
-  <ul>
-    <li ng-repeat="x in products">
-    {{x}}
-    <span ng-click="removeItem($index)">&times;</span>
-    </li>
-  </ul>
-  <input ng-model="addMe">
-  <button ng-click="addItem()">Add</button>
-  <p>{{errortext}}</p>
+<div class="jumbotron">
+<div class="text-center">
+	<h1>Shopping List</h1>
+	<p>Click the "X" to remove an item</p>
 </div>
-
-
+<div class="container text-center" ng-app="ShoppingList" ng-controller="myCtrl">
+	<div>
+	  <ul>
+	    <h2  ng-repeat="x in products">
+	    {{x}}
+	    <span ng-click="removeItem($index)"><i class="fa fa-times" aria-hidden="true"></i></span>
+	    </h2>
+	  </ul>
+	 </div>
+	 <div id="input">
+	  <input class="input-field" placeholder="Add Items to the List Here" ng-model="addMe">
+	  <button class="btn btn-default" ng-click="addItem()">Add</button>
+	  <p>{{errortext}}</p>
+	</div>
+</div>
 </body>
 </html>
