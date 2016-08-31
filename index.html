@@ -1,37 +1,105 @@
+<!DOCTYPE html>
 <html>
-   
-   <head>
-      <title>Angular JS Controller</title>
-      <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-   </head>
-   
-   <body>
-      <h2>AngularJS Sample Application</h2>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="js/modernizr-2.6.2.min.js"></script>
+    <!--Boostrap-->
+    <link rel="stylesheet nofollow" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet nofollow" href="css/style.css">
+    <link rel="stylesheet nofollow" type="text/css" href="css/flexslider.css">
+    <link href="css/shCore.css" rel="stylesheet nofollow" type="text/css" />
+    <link href="css/shThemeDefault.css" rel="stylesheet nofollow" type="text/css" />
+    <link rel="stylesheet nofollow" href="css/owl.carousel.css">
+    <link rel="stylesheet nofollow" href="css/responsive.css">
+    <!-- Lightbox CSS -->
+    <link href="css/lightbox.css" rel="stylesheet nofollow">
+    <!--Font-->
+    <link href="http://fonts.googleapis.com/css?family=Lora" rel="stylesheet nofollow" type="text/css">
+    <script src="https://use.fontawesome.com/a9e7dca764.js"></script>
+<body ng-app="">
+
+<div ng-include="'header.html'"></div>
+
+
+<!--Main Content
+==================================== -->
+<div id="come">
+    <h1>Come Stay With Us</h1>
+    <p>We have many amenities for you to come and enjoy at Savannah’s Meadow. Our beautiful
+        treehouses are a sight to behold. Once you are totally convinced you want to spend
+        the rest of your life in one, make a reservation to stay a night.<br>
+        <br>
+        By day you can bring a picnic, book a field trip, or come wander the gardens. Visit
+        with Simon the donkey, the gander of geese, fish their ponds, or see the chickens
+        grow. Come and visit our store to buy your fill of lavender essentials and Savannah
+        Meadow specialities.
+    </p>
+</div>
+<!--Venues
+==================================== -->
+<div id="venues">
+	<h1>Venues</h1>
+	    <div class="row">
+        <div class="col-sm-4">
+          <img class="img-responsive" src="img/treeSlider/mo.out2.jpg" />
+              <h2>The Majestic Oak Treehouse</h2>
+          	<p>Named for the surrounding majestic oak trees, this treehouse stands two or three
+                  stories up from the ground with the living tree running straight...<br><br><a href="majestic.html">[Click here for pricing and more info]</a></p>
+          </div>
+          <div class="col-sm-4">
+          <img class="img-responsive" src="img/treeSlider/bc.porch.jpg" />
+              <h2>Bare Creek Hollow Treehouse</h2>
+              <p>Named for the "bare" creek that is now filled with water and winds directly beneath
+                  and around this beautiful two-story treehouse...<br><br><a href="bare.html">[Click here for pricing and more info]</a></p>
+          </div>
+          <div class="col-sm-4">
+              <img class="img-responsive" src="img/treeSlider/g.jpg" />
+              <h2>Gypsy's Grotto</h2>
+              <p>Legend has it that gypsy’s used to live here! They long since left their home.
+                  Featuring a hot tub and an outdoor bathtub, Gypsy’s grotto creates a romantic atmosphere
+                  for the adventurous soul...<br><br><a href="gypsy.html">[Click here for pricing and more info]</a></p>
+          </div>
+          <div class="col-sm-4">
+              <img class="img-responsive" src="img/treeSlider/w.jpg" />
+              <h2>Weddings</h2>
+            <p>All outdoors, surrounded by trees and lavender, join together in holy matrimony
+                  under the Texas blue sky.
+                Your closest friends and family all sit under the wooden wedding pavilion as you
+                and the love of your life hold hands under the little chapel...<br><br><a href="wedding.html">[Click here for pricing and more info]</a></p>
+          </div>
+          <div class="col-sm-4">
+          <img class="img-responsive" src="img/treeSlider/mo.out2.jpg" />
+              <h2>The Events Field</h2>
+              <p>Right out front is our sprawling Events Field. Offering a stage and eating areas, this is a great place for any event. Get your reservation in now for your concert, party, rehersal dinner, ceremony...<br><br><a href="events.html">[Click here for pricing and more info]</a></p>
       
-      <div ng-app = "mainApp" ng-controller = "studentController">
-         Enter first name: <input type = "text" ng-model = "student.firstName"><br><br>
-         Enter last name: <input type = "text" ng-model = "student.lastName"><br>
-         <br>
-         
-         You are entering: {{student.fullName()}}
-      </div>
-      
-      <script>
-         var mainApp = angular.module("mainApp", []);
-         
-         mainApp.controller('studentController', function($scope) {
-            $scope.student = {
-               firstName: "Nick",
-               lastName: "Taylor",
-               
-               fullName: function() {
-                  var studentObject;
-                  studentObject = $scope.student;
-                  return studentObject.firstName + " " + studentObject.lastName;
-               }
-            };
-         });
-      </script>
-      
-   </body>
+          </div>
+          <div class="col-sm-4">
+              <img class="img-responsive" src="img/treeSlider/mo.out2.jpg" />
+                  <h2>Store</h2>
+              	<p>Stop by our iconic Silo Store and choose from a slew of Lavendar and other products.
+                We have lavendar soaps, oils, sprigs, lotions, chap sticks...<br><br><a href="majestic.html">[Click here to visit the store]</a></p>
+          </div>
+    </div>
+    <div id="treebtn">
+      <a href="http://www.webervations.com/magic-scripts/roombook.asp?memberid=MajesticTreehouse&roomid=99485&zlength=1" target="_blank" type="button" class="btn btn-default btn-lg">Click Here to Reserve</a>
+    </div>
+</div>
+<!--End Venues
+==================================== -->
+<!--End Main Content
+==================================== -->
+
+
+<div ng-include="'footer.html'"></div>
+<!--Lightbox-->
+<script src="js/lightbox.min.js"></script>
+<!--Google Maps-->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<!--Main JavaScript-->
+<script src="js/main.js"></script>
+<!--Flexslider-->
+<script src="js/jquery.flexslider-min.js"></script>
+</body>
 </html>
